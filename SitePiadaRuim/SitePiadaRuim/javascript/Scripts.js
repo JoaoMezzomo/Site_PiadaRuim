@@ -1,0 +1,3 @@
+﻿function Sortear() {
+    PageMethods.BuscarPiada();
+}
