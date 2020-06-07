@@ -44,15 +44,18 @@
                 </div>
             </div>
 
-            <div class="row bg-light pb-2" style="height: 31%;">
-                <div class="col-4">
+            <div class="row bg-light pb-2">
+                <div class="col-6">
                     <asp:Label ID="lblQuantidade" class="text-primary font-weight-bold" runat="server" Text=""></asp:Label>
                 </div>
-                <div class="col-4 text-center">
-                    <asp:Button class="btn btn-primary" ID="btnGerarPiada" runat="server" Text="Ver Piada Ruim" OnClick="btnGerarPiada_Click" style="cursor:pointer;" />
-                </div>
-                <div class="col-4">
+                <div class="col-6">
                     <asp:TextBox class="float-right text-center text-primary font-weight-bold" ID="txtSorteio" Columns="5" runat="server" ReadOnly="True"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="row bg-light pb-2" style="height: 21%;">
+                <div class="col-12 text-center">
+                    <asp:Button class="btn btn-primary" ID="Button1" runat="server" Text="Ver Piada Ruim" OnClick="btnGerarPiada_Click" style="cursor:pointer;" />
                 </div>
             </div>
 

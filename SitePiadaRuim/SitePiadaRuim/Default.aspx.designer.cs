@@ -51,15 +51,6 @@ namespace SitePiadaRuim
         protected global::System.Web.UI.WebControls.Label lblQuantidade;
 
         /// <summary>
-        /// Controle btnGerarPiada.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGerarPiada;
-
-        /// <summary>
         /// Controle txtSorteio.
         /// </summary>
         /// <remarks>
@@ -67,6 +58,15 @@ namespace SitePiadaRuim
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSorteio;
+
+        /// <summary>
+        /// Controle Button1.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
         /// Controle Image1.
