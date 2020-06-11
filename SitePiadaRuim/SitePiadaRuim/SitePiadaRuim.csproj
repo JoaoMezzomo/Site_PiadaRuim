@@ -70,12 +70,13 @@
     <Content Include="Default.aspx" />
     <Content Include="EnvioDePiada.aspx" />
     <Content Include="img\Emoji.png" />
-    <Content Include="javascript\Scripts.js" />
-    <Content Include="piadas\Piadas.txt" />
     <Content Include="Solicitacoes.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classes\Data.cs" />
+    <Compile Include="classes\Piada.cs" />
+    <Compile Include="classes\Solicitacao.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -110,9 +111,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="solicitacoes\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

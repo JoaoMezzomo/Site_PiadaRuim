@@ -45,11 +45,10 @@
             </div>
 
             <div class="row bg-light pb-2" style="height: 31%;">
-                <div class="col-6 text-center">
-                    <asp:Button class="btn btn-success float-right" ID="btnSalvar" runat="server" Text="Salvar" style="cursor:pointer;" OnClick="btnSalvar_Click" />
-                </div>
-                <div class="col-6 text-center">
-                    <asp:Button class="btn btn-danger float-left" ID="btnExcluir" runat="server" Text="Excluir" style="cursor:pointer;" OnClick="btnExcluir_Click" />
+                <div class="col-12">
+                    <asp:Button class="btn btn-success" ID="btnSalvarExcluir" runat="server" Text="Salvar e Excluir" style="cursor:pointer;" OnClick="btnSalvarExcluir_Click" />
+                    <asp:Button class="btn btn-success pl-1 pr-1" ID="btnSalvar" runat="server" Text="Salvar" style="cursor:pointer;" OnClick="btnSalvar_Click" />
+                    <asp:Button class="btn btn-danger" ID="btnExcluir" runat="server" Text="Excluir" style="cursor:pointer;" OnClick="btnExcluir_Click" />
                 </div>
             </div>
 

@@ -42,6 +42,15 @@ namespace SitePiadaRuim
         protected global::System.Web.UI.WebControls.TextBox txtPiada;
 
         /// <summary>
+        /// Controle btnSalvarExcluir.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSalvarExcluir;
+
+        /// <summary>
         /// Controle btnSalvar.
         /// </summary>
         /// <remarks>

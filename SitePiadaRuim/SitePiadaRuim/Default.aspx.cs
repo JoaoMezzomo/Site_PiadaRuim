@@ -6,12 +6,13 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
 using System.Web.Services;
+using SitePiadaRuim.classes;
 
 namespace SitePiadaRuim
 {
     public partial class Default : System.Web.UI.Page
     {
-        string[] Piadas;
+        List<Piada> Piadas = new List<Piada>();
         int Quantidade;
         int IndexPiada;
 
@@ -22,34 +23,55 @@ namespace SitePiadaRuim
 
         private void CarregarInformacoes() 
         {
-            Piadas = File.ReadAllText(Server.MapPath("\\piadas\\Piadas.txt")).Split('|');
+            Piadas.Clear();
 
-            Quantidade = Piadas.Count();
+            try
+            {
+                Piadas = Piada.Lista();
 
-            lblQuantidade.Text = Quantidade + " piadas registradas!";
+                Quantidade = Piadas.Count();
+
+                lblQuantidade.Text = Quantidade + " piadas registradas!";
+            }
+            catch (Exception)
+            {
+                MostrarMensagem("Não foi possível carregar as piadas cadastradas.");
+            }
         }
 
         private void  BuscarPiada() 
         {
-            Random random = new Random();
-
-            IndexPiada = random.Next(Quantidade);
-
-            string piada = Piadas[IndexPiada];
-
-            if (piada[0] == '\r' && piada[1] == '\n')
+            try
             {
-                piada = piada.Remove(0, 2);
+                Random random = new Random();
+
+                IndexPiada = random.Next(Quantidade);
+
+                string piada = Piadas[IndexPiada].Piada_Data;
+
+                if (piada[0] == '\r' && piada[1] == '\n')
+                {
+                    piada = piada.Remove(0, 2);
+                }
+
+                txtPiada.Text = piada;
+
+                txtSorteio.Text = (IndexPiada + 1).ToString();
             }
-
-            txtPiada.Text = piada;
-
-            txtSorteio.Text = (IndexPiada + 1).ToString();
+            catch (Exception)
+            {
+                MostrarMensagem("Não foi possível carregar uma nova piada.");
+            }
         }
 
         protected void btnGerarPiada_Click(object sender, EventArgs e)
         {
             BuscarPiada();
+        }
+
+        private void MostrarMensagem(string mensagem)
+        {
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "AlertBox", $"alert('{mensagem}');", true);
         }
     }
 }

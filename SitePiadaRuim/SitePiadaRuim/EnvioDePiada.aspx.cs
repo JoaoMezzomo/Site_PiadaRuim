@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
+using SitePiadaRuim.classes;
 
 namespace SitePiadaRuim
 {
@@ -27,36 +28,19 @@ namespace SitePiadaRuim
 
         private void EnviarPiada() 
         {
-            string piada = txtPiada.Text;
+            Solicitacao solicitacao = new Solicitacao();
 
-            string pathPiada = Server.MapPath("\\solicitacoes");
+            solicitacao.Piada_Data = txtPiada.Text;
 
-            pathPiada += "\\Piada_" + DateTime.Now.ToString("dd_MM_yyy_HH_mm_ss") + ".txt";
-
-            bool nomeUnico = false;
-            int incremento = 1;
-
-            while (!nomeUnico)
+            if (!solicitacao.Inserir())
             {
-                if (!File.Exists(pathPiada))
-                {
-                    nomeUnico = true;
-                }
-                else
-                {
-                    pathPiada = pathPiada.Replace(".txt", "_" + incremento + ".txt");
-                    incremento++;
-                }
+                MostrarMensagem("Não foi possível enviar a piada. Tente novamente mais tarde.");
             }
-
-
-            using (StreamWriter writer = File.CreateText(pathPiada))
+            else
             {
-                writer.Write(piada);
+                lblMensagem.Text = "Piada enviada com sucesso!";
+                txtPiada.Text = "";
             }
-
-            lblMensagem.Text = "Piada enviada com sucesso!";
-            txtPiada.Text = "";
         }
 
         protected void btnEnviarPiada_Click(object sender, EventArgs e)
@@ -64,11 +48,11 @@ namespace SitePiadaRuim
             if (string.IsNullOrEmpty(txtPiada.Text))
             {
                 Senha = "";
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "AlertBox", "alert('Digite sua piada.');", true);
+                MostrarMensagem("Digite sua piada.");
             }
-            else if (txtPiada.Text == "1030jwml1030jwml") 
+            else if (txtPiada.Text == "admdaspiadas") 
             {
-                Senha = "1030jwml1030jwml";
+                Senha = "admdaspiadas";
                 Response.Redirect("Solicitacoes.aspx");
             }
             else
@@ -76,6 +60,11 @@ namespace SitePiadaRuim
                 Senha = "";
                 EnviarPiada();
             }
+        }
+
+        private void MostrarMensagem(string mensagem) 
+        {
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "AlertBox", $"alert('{mensagem}');", true);
         }
     }
 }
