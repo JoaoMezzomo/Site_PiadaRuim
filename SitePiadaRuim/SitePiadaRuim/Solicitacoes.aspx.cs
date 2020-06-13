@@ -38,6 +38,8 @@ namespace SitePiadaRuim
 
                 ListItem itemZero = new ListItem();
 
+                itemZero.Text = "Solicitações";
+
                 ddlSolicitacoes.Items.Add(itemZero);
 
                 Solicitacoess.Clear();
@@ -81,7 +83,7 @@ namespace SitePiadaRuim
 
             solicitacao.ID_Data = Convert.ToInt32(ddlSolicitacoes.SelectedItem.Text);
 
-            if (solicitacao.Remover())
+            if (!solicitacao.Remover())
             {
                 MostrarMensagem("Não foi possível excluir a piada.");
             }

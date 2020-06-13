@@ -32,7 +32,7 @@
                 </div>
             </div>
         
-            <div class="row bg-light pt-3 pb-2 text-center">
+            <div class="row bg-light pt-3 pb-2">
                 <div class="col-12">
                     <asp:DropDownList ID="ddlSolicitacoes" runat="server" AutoPostBack="true" style="cursor:pointer;" OnSelectedIndexChanged="ddlSolicitacoes_SelectedIndexChanged"></asp:DropDownList>
                 </div>
