@@ -23,12 +23,14 @@
 
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
-                    <a href="Default.aspx">
-                        <h1 class="text-light pt-2 pb-2">Piada Ruim</h1>
+                    <a href="#">
+                        <h1 class="text-light pt-2 pb-2">Solicitações</h1>
                     </a>
                 </div>
-                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 text-center pt-0 pt-sm-0 pt-md-4 pt-lg-4 pt-xl-4 pb-4 pb-sm-3 pb-md-0 pb-lg-0 pb-xl-0">
-                    <a href="Default.aspx" class="text-light font-weight-bold">Voltar</a>
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 text-center pt-0 pt-sm-0 pt-md-2 pt-lg-2 pt-xl-2 pb-4 pb-sm-3 pb-md-0 pb-lg-0 pb-xl-0">
+                    <a href="Default.aspx" class="btn btn-info btn-lg" role="button">
+                        Sair
+                    </a>
                 </div>
             </div>
         

@@ -19,16 +19,15 @@
     <form ID="Form1" runat="server" style="height: 100%;">
         <div class="container" style="height: 100%;">
             <div class="row bg-primary" style="border-bottom: 6px solid #fff; ">
-                <div class="col-0 col-sm-0 col-md-3 col-lg-3 col-xl-3 text-center">
-
-                </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
-                    <a href="Default.aspx">
-                        <h1 class="text-light pt-2 pb-2">Piada Ruim</h1>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center text-sm-center">
+                    <a href="#">
+                        <asp:Image ID="Image2" Class="img-fluid" ImageUrl="~/img/Logo.png" runat="server" />
                     </a>
                 </div>
-                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 text-center pt-0 pt-sm-0 pt-md-4 pt-lg-4 pt-xl-4 pb-3 pb-sm-3 pb-md-0 pb-lg-0 pb-xl-0">
-                    <a href="Default.aspx" class="text-light font-weight-bold">Voltar</a>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center text-sm-center text-md-right text-lg-right text-xl-right pt-2 pt-sm-2 pt-md-3 pt-lg-3 pt-xl-3 pb-3 pb-sm-3 pb-md-0 pb-lg-0 pb-xl-0">
+                    <a href="Default.aspx" class="btn btn-info btn-lg" role="button">
+                        Voltar
+                    </a>
                 </div>
             </div>
         
@@ -57,7 +56,7 @@
 
             <div class="row bg-light pb-2" style="height: 19%;">
                 <div class="col-12 text-center">
-                    <asp:Button class="btn btn-primary" ID="btnEnviarPiada" runat="server" Text="Enviar Piada Ruim" style="cursor:pointer;" OnClick="btnEnviarPiada_Click" />
+                    <asp:Button class="btn btn-info btn-lg" ID="btnEnviarPiada" runat="server" Text="Enviar Piada Ruim" style="cursor:pointer;" OnClick="btnEnviarPiada_Click" />
                 </div>
             </div>
 
